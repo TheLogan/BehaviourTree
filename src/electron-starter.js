@@ -1,17 +1,20 @@
-const { app, BrowserWindow } = require('electron')
+// @ts-ignore
+let { app, BrowserWindow, Menu, MenuItem, webContents } = require('electron')
+
 
 function createWindow() {
   // Create the browser window.
   let win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1920,
+    height: 1080,
     webPreferences: {
       nodeIntegration: true
     }
   })
 
+
   // and load the index.html of the app.
-  win.loadFile('index.html')
+  win.loadURL('http://localhost:3000/')
 }
-console.log('app', app);
+
 app.on('ready', createWindow)

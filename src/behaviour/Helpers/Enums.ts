@@ -1,0 +1,1 @@
+export enum states { success, fail, running }
