@@ -1,0 +1,23 @@
+{
+  "name": "BehaviourTree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheLogan/BehaviourTree.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheLogan/BehaviourTree/issues"
+  },
+  "homepage": "https://github.com/TheLogan/BehaviourTree#readme",
+  "devDependencies": {
+    "electron": "^7.1.11"
+  }
+}
