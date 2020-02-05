@@ -2,9 +2,10 @@ import { Component } from "./Component";
 import { states } from "../Helpers/Enums";
 
 export class Root extends Component {
-  child: Component | null = null;
+  parent: undefined;
+  children: Component | null = null;
 
   getStatus() {
-    return this.child?.getStatus() || states.fail;
+    return this.children?.getStatus() || states.fail;
   }
 }

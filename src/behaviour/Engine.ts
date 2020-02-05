@@ -1,16 +1,21 @@
 import { Root } from "./Components/Root";
-import { Log } from "./Components/Actions/Log";
 import { states } from "./Helpers/Enums";
 
 export class Engine {
   root: Root | null = null;
+  running: boolean = false;
 
   constructor() {
     this.start();
   }
 
+  stop() {
+    this.running = false;
+  }
+
   async start() {
-    while (true) {
+    this.running = true;
+    while (this.running) {
       if (this.root == null) return;
       let status = this.root.getStatus();
       if (status !== states.running) return;

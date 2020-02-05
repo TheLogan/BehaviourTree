@@ -8,6 +8,9 @@ export class Component {
   htmlPosY: number = 0;
   protected status: states = states.running;
 
+  parent: Component | null | undefined;
+  children: Component | Component[] | null | undefined;
+
   getStatus() {
     return this.status;
   }

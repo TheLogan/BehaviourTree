@@ -1,15 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Engine } from './behaviour/Engine';
-import { Canvas } from './Components/Canvas';
+import Canvas from './Components/Canvas';
+import { createMuiTheme, ThemeProvider, CssBaseline } from '@material-ui/core';
+
+const theme = createMuiTheme({
+  palette: {
+    type: "dark"
+  }
+});
 
 
 const App = () => {
-  const [engine, setEngine] = useState(new Engine());
+  const [engine] = useState(new Engine());
 
   return (
     <div className="App">
-      <Canvas engine={engine} />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Canvas engine={engine} />
+      </ThemeProvider>
     </div>
   );
 }
